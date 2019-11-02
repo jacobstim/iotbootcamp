@@ -1,0 +1,9 @@
+{
+    "DeviceId": "tija-huzzah01",
+    "MeasurementTime": 1572729478,
+    "Temperature": 23.30,
+    "Humidity": 68.78,
+    "Pressure" : 1012.30,
+    "Gas" : 32.90,
+    "Altitude" : 67.39
+}

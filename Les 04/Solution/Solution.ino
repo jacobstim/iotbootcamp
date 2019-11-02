@@ -86,8 +86,8 @@ uint32_t ntpLastSync = -NTP_TIMEOUT;
 uint32_t dataLastMeasurementTime = -MEASUREMENT_INTERVAL;
 
 // WiFi SSL clients
-//BearSSL::WiFiClientSecure wifiClient;
-WiFiClientSecure wifiClient;
+BearSSL::WiFiClientSecure wifiClient;
+//WiFiClientSecure wifiClient;
 BearSSL::X509List msftCerts(certificates);
 
  /* ====================================================================================================
@@ -116,8 +116,8 @@ void setup() {
   mGotIpHandler = WiFi.onStationModeGotIP(onGotIP);
 
   // Configure Secure WiFi client to accept Microsoft certificates
-  //wifiClient.setTrustAnchors(&msftCerts);
-  wifiClient.setInsecure();     // Accept any certificate
+  wifiClient.setTrustAnchors(&msftCerts);
+  //wifiClient.setInsecure();     // Accept any certificate
 
 /* **********************************************************************************************************************************
  * **********************************************************************************************************************************
